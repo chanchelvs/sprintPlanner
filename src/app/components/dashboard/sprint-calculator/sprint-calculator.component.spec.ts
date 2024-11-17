@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { SprintCalculatorComponent } from './sprint-calculator.component';
 
@@ -8,7 +9,8 @@ describe('SprintCalculatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SprintCalculatorComponent ]
+      declarations: [ SprintCalculatorComponent ],
+      imports: [ ReactiveFormsModule ]
     })
     .compileComponents();
 

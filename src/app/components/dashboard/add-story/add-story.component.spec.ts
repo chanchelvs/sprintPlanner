@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AddStoryComponent } from './add-story.component';
 
@@ -8,7 +9,8 @@ describe('AddStoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddStoryComponent ]
+      declarations: [ AddStoryComponent ],
+      imports: [ ReactiveFormsModule ]
     })
     .compileComponents();
 
