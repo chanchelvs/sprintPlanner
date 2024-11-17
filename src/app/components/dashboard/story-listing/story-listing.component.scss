@@ -1,21 +1,35 @@
 @import '../../../../styles.scss';
 .story-list {
   padding: 15px;
+  // width: 100%;
+  h2 {
+    position: sticky;
+  }
 }
-.list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 5px 0;
-  background: $light-bg;
-  border-radius: 4px;
+.main-list {
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: $light-bg;
+    border-radius: 4px;
+    max-height: 300px;
+    overflow-y: auto; /* Vertical scroll for overflowing content */
+    overflow-x: hidden;
+
+    .story-name {
+      font-weight: 500;
+    }
+    .story-point {
+      color: $text-muted;
+    }
   }
-  .story-name {
-    font-weight: 500;
-  }
-  .story-point {
-    color: $text-muted;
-  }
+}
+
 
 

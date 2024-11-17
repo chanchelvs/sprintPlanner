@@ -1,7 +1,9 @@
 <div class="story-list">
   <h2>Story Listing</h2>
-  <div class="list-item" *ngFor="let story of storyList">
-    <span class="story-name">{{ story.name }} </span>
-    <span class="story-point">{{ story.points}}</span>
+  <div class="main-list">
+    <div class="list-item" *ngFor="let story of storyList">
+      <span class="story-name">{{ story.name }} </span>
+      <span class="story-point">{{ story.points}}</span>
+    </div>
   </div>
 </div>
