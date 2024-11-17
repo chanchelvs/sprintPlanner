@@ -2,7 +2,6 @@
 
 .add-story {
   padding: 15px;
-  // width: 100%;
 }
 
 .btn-primary {
@@ -10,7 +9,7 @@
   background: $primary-color;
 
   &:disabled {
-    background: #ccc;
+    opacity: 50%;
     cursor: not-allowed;
   }
 

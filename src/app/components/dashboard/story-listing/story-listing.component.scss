@@ -1,10 +1,6 @@
-@import '../../../../styles.scss';
+@import "../../../../styles.scss";
 .story-list {
   padding: 15px;
-  // width: 100%;
-  h2 {
-    position: sticky;
-  }
 }
 .main-list {
   max-height: 200px;
@@ -19,7 +15,7 @@
     background: $light-bg;
     border-radius: 4px;
     max-height: 300px;
-    overflow-y: auto; /* Vertical scroll for overflowing content */
+    overflow-y: auto;
     overflow-x: hidden;
 
     .story-name {
@@ -30,6 +26,3 @@
     }
   }
 }
-
-
-

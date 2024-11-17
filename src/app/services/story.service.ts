@@ -9,7 +9,6 @@ export class StoryService {
   private stories = new BehaviorSubject<Story[]>([]);
   private selectedStories = new BehaviorSubject<Story[]>([]);
 
-
   setStories(newStory: Story) {
     const availableStories = this.stories.value;
     this.stories.next([...availableStories, newStory]);
@@ -23,16 +22,17 @@ export class StoryService {
   }
 
   setAutoSelectedStories(sprintPoints: number) {
-   const currentSprintStories: Story[] =  [];
-   let currentPoints = 0;
-   const stories = this.stories.getValue().sort((a, b) => b.points - a.points);
-   stories.forEach(item => {
-    if(item.points + currentPoints <= sprintPoints ) {
-      currentSprintStories.push(item);
-      currentPoints = item.points + currentPoints;
-    }
-    this.selectedStories.next(currentSprintStories)
-   });
+    const currentSprintStories: Story[] = [];
+    let currentPoints = 0;
+    const stories = [...this.stories.value];
+    stories.sort((a, b) => b.points - a.points);
+    stories.forEach((item) => {
+      if (item.points + currentPoints <= sprintPoints) {
+        currentSprintStories.push(item);
+        currentPoints = item.points + currentPoints;
+      }
+      this.selectedStories.next(currentSprintStories);
+    });
   }
 
   getAutoSelectdStories() {
@@ -40,7 +40,7 @@ export class StoryService {
   }
 
   clearStories() {
-   this.stories.next([]);
+    this.stories.next([]);
   }
   clearSelectedStories() {
     this.selectedStories.next([]);

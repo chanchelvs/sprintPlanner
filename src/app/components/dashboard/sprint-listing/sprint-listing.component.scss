@@ -1,7 +1,6 @@
 @import '../../../../styles.scss';
 .sprint-list{
   padding: 15px;
-  // width: 100%;
 }
 .main-list {
   max-height: 200px;
@@ -15,8 +14,6 @@
     margin: 5px 0;
     background: $light-bg;
     border-radius: 4px;
-    // overflow-y: auto; /* Vertical scroll for overflowing content */
-    // overflow-x: hidden;
     .story-name {
     font-weight: 500;
     }
