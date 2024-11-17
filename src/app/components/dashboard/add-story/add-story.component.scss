@@ -1,0 +1,19 @@
+@import '../../../../styles.scss';
+
+.add-story {
+  padding: 15px;
+}
+
+.btn-primary {
+  @include button-base;
+  background: $primary-color;
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    background: darken($primary-color, 10%);
+  }
+}
